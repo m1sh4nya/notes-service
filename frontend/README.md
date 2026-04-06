@@ -1,28 +1,70 @@
-\# Сервис заметок
+\# Frontend сервиса заметок
 
 
 
-Проект для курсовой работы
+Клиентская часть на React.
 
 
 
-\## Функционал
-
-\- Регистрация и авторизация
-
-\- Двухфакторная аутентификация
-
-\- Создание и редактирование заметок
-
-\- Поиск по заметкам
+\## Зависимости
 
 
 
-\## Технологии
+\- React 18
 
-\- Backend: Python + FastAPI
+\- React Router DOM
 
-\- Frontend: React
+\- Axios
 
-\- База данных: SQLite
+
+
+\## Компоненты
+
+
+
+\- Login - форма входа
+
+\- Register - форма регистрации
+
+\- TwoFA - форма 2FA кода
+
+\- NotesList - список заметок
+
+\- NoteEditor - редактор заметок
+
+
+
+\## Маршруты
+
+
+
+| URL | Компонент |
+
+|-----|-----------|
+
+| /login | Login |
+
+| /register | Register |
+
+| /2fa | TwoFA |
+
+| /notes | NotesList |
+
+| /notes/new | NoteEditor |
+
+| /notes/:id | NoteEditor |
+
+
+
+\## Запуск
+
+
+
+npm install
+
+npm start
+
+
+
+Приложение: http://localhost:3000
 
