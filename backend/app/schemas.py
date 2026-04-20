@@ -29,19 +29,23 @@ class TwoFAResponse(BaseModel):
     message: str
     token: Optional[str] = None
 
-# Схемы для заметок
+# Схемы для заметок (с поддержкой Markdown)
 class NoteCreate(BaseModel):
     title: str
     content: str
+    is_markdown: bool = True  # По умолчанию включен Markdown
 
 class NoteUpdate(BaseModel):
     title: Optional[str] = None
     content: Optional[str] = None
+    is_markdown: Optional[bool] = None
 
 class NoteResponse(BaseModel):
     id: int
     title: str
     content: str
+    content_html: Optional[str] = None  # HTML версия для отображения
+    is_markdown: bool
     created_at: datetime
     updated_at: Optional[datetime] = None
     user_id: int
